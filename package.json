@@ -4,13 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node --watch ./server/index.js",
-    "build": "node server/index.js",
-    "preview": "vite preview",
-    "start": "node ./server/index.js"
+    "start": "node ./server/index.js",
+    "server": "nodemon ./server/index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "vite build --base /client/ --outDir ./server/public && node ./server/index.js"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
+    "nodemon": "^3.1.3",
     "vite": "^5.2.0"
   },
   "dependencies": {

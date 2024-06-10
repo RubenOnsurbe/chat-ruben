@@ -78,7 +78,7 @@ io.on('connection', async (socket) => {
 
 app.use(logger('dev'));
 
-app.get('/', (req, res) => {
+app.get('./public', (req, res) => {
     res.sendFile(process.cwd() + '/index.html');
 });
 app.get('/favicon.ico', (req, res) => {
