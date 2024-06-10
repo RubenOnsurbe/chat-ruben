@@ -8,12 +8,14 @@
     "server": "nodemon ./server/index.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "vite build --base /client/ --outDir ./server/public && node ./server/index.js"
+    "build": "vite build && node ./server/index.js"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
     "concurrently": "^8.2.2",
     "nodemon": "^3.1.3",
-    "vite": "^5.2.0"
+    "vite": "^5.2.0",
+    "vite-plugin-singlefile": "^2.0.1"
   },
   "dependencies": {
     "@libsql/client": "^0.6.2",
