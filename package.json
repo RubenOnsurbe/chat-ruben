@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node --watch ./server/index.js",
-    "build": "node ./server/index.js",
+    "build": "node server/index.js",
     "preview": "vite preview",
     "start": "node ./server/index.js"
   },
