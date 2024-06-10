@@ -81,7 +81,9 @@ app.use(logger('dev'));
 app.get('/', (req, res) => {
     res.sendFile(process.cwd() + '/index.html');
 });
-
+app.get('/favicon.ico', (req, res) => {
+    res.sendFile(process.cwd() + '/favicon.ico');
+});
 server.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
 });
